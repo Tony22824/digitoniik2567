@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digittoniik-AgenWebsite</title>
+    <link rel="icon" href="https://i.ibb.co.com/0p9HYXK8/IMG-20250331-104153.jpg">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background & Body */
+        body {
+            background-image: url("https://i.ibb.co.com/Ndy5sxZT/IMG-20250131-WA0000.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Diganti dari height: 100vh agar bisa lebih panjang */
+            text-align: center;
+            font-family: Arial, sans-serif;
+            overflow: auto; /* Agar halaman bisa di-scroll jika konten banyak */
+            padding: 20px; /* Biar tidak terlalu rapat */
+        }
+
+        /* Animasi fade-in */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo */
+        .sub-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-top: 20px; /* Tambahkan margin agar tidak terpotong */
+            animation: popUp 1.5s ease-out forwards;
+        }
+
+        /* Judul */
+        h1 {
+            font-size: 50px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Paragraf */
+        .paragraft, .paragraft2 {
+            color: white;
+            font-size: 18px;
+            max-width: 600px;
+            margin-top: 15px;
+        }
+
+        /* Tombol */
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button2 {
+            background-color: green;
+            width: 250px;
+            height: 60px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            gap: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .button2:hover {
+            background-color: darkgreen;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+        }
+
+        .button2 img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Marquee */
+        marquee {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Tombol Promo */
+        .promo-container {
+            margin-top: 30px;
+            margin-bottom: 50px; /* Tambahkan margin bawah agar tidak terpotong */
+        }
+
+        .promo-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7); /* Lebih gelap agar teks lebih jelas */
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .promo-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .promo-button img {
+            width: 200px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .promo-text {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .dede{
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sub-logo -->
+    <img src="https://i.ibb.co.com/0p9HYXK8/IMG-20250331-104153.jpg" alt="Sub Logo" class="sub-logo fade-in">
+
+    <!-- Judul -->
+    <h1 class="slide-down">Digittoniik-AgenWebsite</h1>
+
+    <!-- Tombol Pesan -->
+    <div class="button-container fade-in">
+        <a href="https://wa.me/6282325314552">
+            <button class="button2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                Pesan Kami
+            </button>
+        </a>
+    </div>
+
+    <!-- Deskripsi -->
+    <p class="paragraft fade-in">Halo kak, selamat datang di komunitas web saya, tempat Anda berbelanja kebutuhan digital bagi industri atau usaha Anda.</p>
+    
+    <p class="paragraft2 fade-in">"Kembangkan bisnis Anda dengan website yang profesional, responsif, dan sesuai kebutuhan. Kami menyediakan jasa pembuatan website yang cepat, aman, dan berkualitas!"</p>
+
+    <!-- Garis & Marquee -->
+    <hr>
+    <marquee id="movingText" behavior="alternate" scrollamount="5"><p class="paragraft fade-in">Informasi Terkait</p></marquee>
+    <hr>
+
+    <!-- Tombol Promo -->
+    <div class="promo-container fade-in">
+        <a href="jasaWeb.html" class="promo-button">
+            <img src="https://i.ibb.co.com/YVvvYNn/Screenshot-2025-02-25-21-02-15-03.jpg" alt="Promo Jasa Web">
+            <p class="promo-text">Ingin bisnis Anda semakin berkembang? Dapatkan website profesional hanya di sini! Klik untuk info lebih lanjut!</p>
+        </a>
+    </div>
+
+    <script>
+        let marquee = document.getElementById("movingText");
+        let speed = 5;
+
+        setInterval(() => {
+            speed += 5; // Tambah kecepatan tiap 5 detik
+            marquee.setAttribute("scrollamount", speed);
+        }, 5000); // 5000ms = 5 detik
+    </script>
+    <br>
+<!-- Bagian Promo dengan Background Hitam Transparan -->
+<div class="promo-container fade-in">
+    <div class="promo-box">
+        <p class="promo-text">
+            🏆 Punya masalah finansial dalam bisnis?  
+            🚀 Mau punya toko online sendiri tapi gak bisa ngoding?  
+            😱 Awas! Biaya programmer dan server mahal banget!  
+            🔥 Tenang! Kami siap membantu buat **aplikasi bisnis yang responsif & kekinian** khusus buat kamu!  
+        </p>
+        <a href="jasaProgramAplikasi.html" class="promo-image-btn">
+            <img src="https://i.ibb.co.com/wFWfxqXW/IMG-20250331-114055.jpg" alt="Solusi Finansial Bisnis">
+            <span class="promo-overlay">💰 Solusi Bisnis Anda! Klik di sini! 💼</span>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
+
+
